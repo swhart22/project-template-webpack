@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Starter Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+    <!-- NBC CSS -->
+    <link href="css/nbcotsbase.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Responsive iFrame stuff -->
+    <!--
+    <script src="http://data.nbcstations.com/js/crosstalk.js"></script>
+    <script type="text/javascript">
+         document.addEventListener("DOMContentLoaded", function() {
+            xtalk.responsive = false;
+            xtalk.init();
+         });
+    </script>
+    -->
+
+  </head>
+
+  <body>
+    <style>
+    #bar{
+        width:100%;
+        height:40px;
+        background-color:#80BEE4;
+        margin-bottom:10px;
+        padding-top:10px;
+    }
+    #buttons{
+        font-family:'Roboto',sans-serif;
+        width:auto;
+        font-size:15px;
+        text-align:center;
+        text-transform:uppercase;
+    }
+    #buttons span{
+        color:#fff;
+        cursor:pointer;
+        margin:0px 10px 0px 10px;
+        margin-top:12.5px;
+        border-radius:5px;
+    }
+    #buttons span.active{
+        color:#80BEE4;
+        background-color:#fff;
+        padding:3px;
+    }
+    #container{
+        width:620px;
+        margin:auto;
+    }
+    #iframe{
+        margin:auto;
+    }
+
+    </style>
+    <div id="bar">
+        <div id="buttons">
+            <span id='bl'>Bleed</span>
+            <span id='la'>Large lead size (970px)</span>
+            <span id='re'>Regular size (620px)</span>
+            <span id='mo'>Mobile</span>
+        </div>
+    </div>
+    <div id="container">
+    
+       
+
+    </div>
+    <script>
+        var container = document.querySelector('#container');
+
+        var mobilebt = document.querySelector('#mo');
+        mobilebt.onclick = mobile;
+
+        var bleedbt = document.querySelector('#bl');
+        bleedbt.onclick = bleed;
+
+        var regularbt = document.querySelector('#re');
+        regularbt.onclick = regular;
+
+        var largebt = document.querySelector('#la');
+        largebt.onclick = large;
+
+        var spans = document.querySelectorAll('#buttons span');
+
+        regular();
+
+        function clearActives(){
+            spans.forEach((el)=>{
+                el.className = '';
+            })
+        }
+
+        function mobile(){
+            clearActives();
+            mobilebt.className = 'active';
+            container.style.width = '400px';
+            container.innerHTML = '<iframe src="./index.html" width="100%" height="2000" scrolling="no" frameborder="0" id="iframe"></iframe>';
+        };
+        function bleed(){
+            clearActives();
+            bleedbt.className = 'active';
+            container.style.width = '100%';
+            container.innerHTML = '<iframe src="./index.html" width="100%" height="2000" scrolling="no" frameborder="0" id="iframe"></iframe>';
+        };
+        function regular(){
+            clearActives();
+            regularbt.className = 'active';
+            container.style.width = '620px';
+            container.innerHTML = '<iframe src="./index.html" width="100%" height="2000" scrolling="no" frameborder="0" id="iframe"></iframe>';
+        };
+        function large(){
+            clearActives();
+            largebt.className = 'active';
+            container.style.width = '970px';
+            container.innerHTML = '<iframe src="./index.html" width="100%" height="2000" scrolling="no" frameborder="0" id="iframe"></iframe>';
+        };
+    </script>
+  </body>
+</html>

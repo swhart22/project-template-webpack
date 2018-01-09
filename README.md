@@ -5,7 +5,7 @@ Before you get started, you should have the latest version of Node installed on 
 ## Development
 Navigate to the empty directory you've created for your project. Then run: 
 ```
-curl -fsSL https://github.com/swhart22/nbcots-ots-gfx/archive/master.tar.gz | tar -xz --strip-components=1
+curl -fsSL https://github.com/swhart22/nbc-ots-ots-gfx/archive/master.tar.gz | tar -xz --strip-components=1
 ```
 Then:
 ```
