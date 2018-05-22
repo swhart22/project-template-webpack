@@ -1,1 +1,1 @@
-const chart = require('./js/proj-config.js')
+const chart = require('./js/proj-config.js');

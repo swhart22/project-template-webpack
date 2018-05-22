@@ -6,5 +6,5 @@ import Data from '../../data/data.csv';
 
 
 
-draw(Data)
+draw(Data);
 //export default metadata;
