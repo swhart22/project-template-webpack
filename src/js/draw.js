@@ -15,7 +15,7 @@ function draw(Data){
 	//this is the configuration for a basic d3 chart to get you started, using typical d3 margin conventions
 	//of course, do whatever you want with javascript in this draw function
 
-	//set width & height based on size of container, which you can control with CSS
+	//sets width & height based on size of container, which you can control with CSS
 	//this helps you make your charts responsive 
 	let width = parseInt(d3.select('#container').style('width')),
 	height = parseInt(d3.select('#container').style('height'));
