@@ -1,11 +1,11 @@
-# NBC OTS Graphics Graphic Template
-This is a node.js project for a graphic used on our sites. It's configured to output an index.html and bundled script file ready to upload to our server and iframe into the CMS. It features live editing capability via Google Sheets (with Sheetsy), and webpack's hot reload functionality for development.
+# Multimedia Team Graphics Template
+This is a Webpack project template for a graphic used on our sites. It's configured to output an index.html and bundled script file ready to upload to our server and iframe into the CMS. It features live editing capability via Google Sheets (with Sheetsy), webpack's hot reload functionality for development, and Crosstalk to ensure responsive iframe height in the CMS.
 
 ## Requirements
 Before you get started, you should have the latest version of Node installed on your machine. That should be it, but if you run into any weird errors, let me know. 
 
 ## Development
-Navigate to the empty directory you've created for your project. Then run: 
+In your terminal or whatever you use to access the command line, navigate to the empty directory you've created for your project. Then run: 
 ```
 curl -fsSL https://github.com/swhart22/nbc-ots-gfx/archive/master.tar.gz | tar -xz --strip-components=1
 ```

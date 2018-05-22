@@ -16,7 +16,7 @@ module.exports = {
 	plugins:[
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			title: 'OTS Graphics Template',
+			title: 'Multimedia Team Graphics Template',
 			template: './src/templates/index.html'
 		}),
 		new CopyWebpackPlugin([
